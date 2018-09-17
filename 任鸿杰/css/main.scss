@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+#box {
+    width: 650px;
+    margin: 0 auto;
+    font-family: serif;
+    border-radius: 5px;
+    border: 1px solid #666;
+    box-sizing: border-box;
+
+    header {
+        display: flex;
+        color: #fff;
+        padding: 5px 20px;
+        align-self: center;
+        background-color: #c22;
+        justify-content: space-between;
+    }
+
+    section {
+        padding: 0 20px;
+
+        input[type='checkbox'] {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        dl {
+
+            dt,
+            dd {
+                display: flex;
+                margin: 10px 0;
+                justify-content: space-between;
+
+                p {
+                    width: 300px;
+
+                    u,
+                    b {
+                        display: block;
+                        overflow: hidden;
+                        line-height: 25px;
+                        white-space: nowrap;
+                        text-decoration: none;
+                        text-overflow: ellipsis;
+                    }
+
+                    input[type='text'] {
+                        width: 35px;
+                        text-align: center;
+                    }
+
+                    span,
+                    i {
+                        width: 70px;
+                        display: inline-block;
+                        font-style: normal;
+                    }
+
+                    i {
+                        width: 50px;
+                        text-align: center;
+                    }
+
+                    button {
+                        padding: 0 5px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            dt {
+                margin-top: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    footer {
+        padding: 10px 20px;
+
+        b {
+            width: 100px;
+            display: inline-block;
+        }
+
+        button {
+            width: 300px;
+        }
+
+        span {
+            width: 55px;
+            text-align: center;
+            display: inline-block;
+        }
+    }
+}

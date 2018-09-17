@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>index</title>
+    <meta charset='UTF-8' />
+    <meta name='author' content='Lyon' />
+    <link rel="stylesheet" href="css/main.css">
+    <meta name='format-detection' content='email=no' />
+    <meta name='format-detection' content='telephone=no' />
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <script src='https://cdn.bootcss.com/jquery/1.8.3/jquery.min.js'></script>
+    <link rel='shortcut icon' href='http://cncdn.idataapi.cn/images/ico/favicon.ico' />
+    <meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no' minimal-ui />
+</head>
+
+<body>
+    <div id="box">
+        <header>
+            <span>&lt;</span>
+            <span>购物车</span>
+            <span>完成</span>
+        </header>
+        <section>
+            <dl>
+                <dt>
+                    <label><input type="checkbox">全选</label>
+                    <strong>删除</strong>
+                </dt>
+            </dl>
+        </section>
+        <footer>
+            总价: ￥ <b>0.00</b>
+            ( 共<span>0</span>件 )
+            <button>去结算</button>
+        </footer>
+    </div>
+    <script type="text/template" id="tmp">
+        <dd>
+            <label><input type="checkbox">🎗</label>
+            <p>
+                <b>产品名称</b>
+                <u>描述描述描述描述描述描述</u>
+                ￥<span></span>
+                <button>-</button>
+                <input type="text" value="1">
+                <button>+</button>
+                库存<i></i>件
+            </p>
+        </dd>
+    </script>
+</body>
+
+</html>
+<script src="js/main.js"></script>
+<script src="js/add.js"></script>
+<script src="js/event.js"></script>
+<script>
+    let priceAry = [25.6, 34.9, 99, 50.6, 58, 79, 62.3, 38.4, 59.2];
+    let storeAry = [100, 101, 99, 100, 100, 97, 52, 86, 152];
+    for (let i = 0; i < priceAry.length; i++) {
+        $('section dl').append($('#tmp').html());
+    }
+    ShopCar.fire('addPara');
+    // 全选按钮
+    $('input').eq(0).change(function () {
+        let lock = this.checked ? true : false;
+        for (let i = 0; i < $('input[type="checkbox"]').length; i++) {
+            $('input[type="checkbox"]').attr('checked', lock);
+        }
+    })
+</script>

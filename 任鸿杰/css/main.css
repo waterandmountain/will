@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+#box {
+  width: 650px;
+  margin: 0 auto;
+  font-family: serif;
+  border-radius: 5px;
+  border: 1px solid #666;
+  box-sizing: border-box;
+}
+
+#box header {
+  display: flex;
+  color: #fff;
+  padding: 5px 20px;
+  align-self: center;
+  background-color: #c22;
+  justify-content: space-between;
+}
+
+#box section {
+  padding: 0 20px;
+}
+
+#box section input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+#box section dl dt,
+#box section dl dd {
+  display: flex;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+
+#box section dl dt p,
+#box section dl dd p {
+  width: 300px;
+}
+
+#box section dl dt p u,
+#box section dl dt p b,
+#box section dl dd p u,
+#box section dl dd p b {
+  display: block;
+  overflow: hidden;
+  line-height: 25px;
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+
+#box section dl dt p input[type='text'],
+#box section dl dd p input[type='text'] {
+  width: 35px;
+  text-align: center;
+}
+
+#box section dl dt p span,
+#box section dl dt p i,
+#box section dl dd p span,
+#box section dl dd p i {
+  width: 70px;
+  display: inline-block;
+  font-style: normal;
+}
+
+#box section dl dt p i,
+#box section dl dd p i {
+  width: 50px;
+  text-align: center;
+}
+
+#box section dl dt p button,
+#box section dl dd p button {
+  padding: 0 5px;
+  vertical-align: middle;
+}
+
+#box section dl dt {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#box footer {
+  padding: 10px 20px;
+}
+
+#box footer b {
+  width: 100px;
+  display: inline-block;
+}
+
+#box footer button {
+  width: 300px;
+}
+
+#box footer span {
+  width: 55px;
+  text-align: center;
+  display: inline-block;
+}
